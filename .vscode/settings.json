@@ -1,0 +1,14 @@
+{
+    "cSpell.words": [
+        "autoscaler",
+        "hostnames",
+        "irsa",
+        "jsonencode",
+        "oidc",
+        "serviceaccount",
+        "terragrunt",
+        "tfstate",
+        "verion",
+        "xlarge"
+    ]
+}
