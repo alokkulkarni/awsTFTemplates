@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gateway
+  labels:
+    mesh: eks_appmesh
+    gateway: ingress_gw
+    appmesh.k8s.aws/sidecarInjectorWebhook: enabled

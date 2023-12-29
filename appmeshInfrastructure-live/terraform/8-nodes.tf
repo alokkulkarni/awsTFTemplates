@@ -33,14 +33,14 @@ resource "aws_iam_role_policy_attachment" "amazon_ec2_container_registry_read_on
 } 
 
 resource "aws_iam_instance_profile" "nodes" {
-    name = "${local.eks_cluster_name}-nodes"
+    name = "${locals.eks_cluster_name}-nodes"
     role = aws_iam_role.nodes.name
 }
 
 resource "aws_eks_node_group" "general" {
     cluster_name    = aws_eks_cluster.eks_cluster.name
     version         = aws_eks_cluster.eks_cluster.version
-    node_group_name = "${local.eks_cluster_name}-general"
+    node_group_name = "${locals.eks_cluster_name}-general"
     node_role_arn   = aws_iam_role.nodes.arn
     subnet_ids      = [
         aws_subnet.private_zone1.id,

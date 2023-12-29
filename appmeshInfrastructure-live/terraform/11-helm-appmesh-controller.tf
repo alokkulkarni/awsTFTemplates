@@ -7,7 +7,7 @@ data "aws_eks_cluster" "eks" {
 }
 
 data "aws_eks_cluster_auth" "eks" {
-  name = local.eks_cluster_name
+  name = locals.eks_cluster_name
 
     depends_on = [
         aws_eks_cluster.eks,

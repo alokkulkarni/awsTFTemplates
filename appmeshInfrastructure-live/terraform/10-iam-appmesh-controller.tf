@@ -5,7 +5,7 @@ data "aws_iam_policy_document" "appmesh_controller" {
 
         condition {
             test     = "StringEquals"
-            variable = ${replace(aws_iam_openid_connect_provider.eks.url, "https://", "")}
+            variable = "${replace(aws_iam_openid_connect_provider.eks.url, "https://", "")}"
             values   = ["system:serviceaccount:appmesh-system:appmesh-controller"]
         }
 

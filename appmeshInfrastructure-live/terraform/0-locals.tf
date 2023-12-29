@@ -1,4 +1,4 @@
-local {
+locals {
     env = "dev"
     region = "eu-west-2"
     zone1 = "eu-west-2a"

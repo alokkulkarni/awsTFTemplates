@@ -29,7 +29,7 @@ resource "aws_iam_role" "service_a" {
 
 
 resource "aws_iam_policy" "service_a" {
-    name        = "${local.eks_cluster_name}-service_a_access"
+    name        = "${locals.eks_cluster_name}-service_a_access"
     description = "Service A"
     policy      = file("./proxy-auth.json")
 }

@@ -1,8 +1,5 @@
-providers {
-    name = "aws"
-    aws {
-        region = locals.region
-    }
+provider "aws" {
+    region = locals.region
 }
 
 terraform {
