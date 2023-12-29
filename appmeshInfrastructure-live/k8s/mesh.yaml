@@ -1,0 +1,13 @@
+---
+apiVersion: appmesh.k8s.aws/V1beta2
+kind: Mesh
+metadata:
+  name: eks_mesh
+  namespace: appmesh-system
+spec:
+  namespaceSelector:
+    matchLabels:
+      mesh: eks_mesh
+      appmesh.k8s.aws/sidecarInjectorWebhook: enabled
+  egressFilter:
+    type: DROP_ALL

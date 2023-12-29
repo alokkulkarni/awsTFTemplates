@@ -1,9 +1,11 @@
 {
     "cSpell.words": [
         "autoscaler",
+        "gavinbunney",
         "hostnames",
         "irsa",
         "jsonencode",
+        "nodegroup",
         "oidc",
         "serviceaccount",
         "terragrunt",
