@@ -1,0 +1,19 @@
+---
+apiVersion: appmesh.k8s.aws/v1beta2
+Kind: GatewayRoute
+metadata:
+  name: ingress-gw-route
+  namespace: service-a
+spec:
+  gatewayRouteName: ingress-gw-route
+  meshName: appmesh
+  virtualGatewayName: ingress-gw
+  spec:
+    httpRoute:
+      action:
+        target:
+          virtualService:
+            virtualServiceName: service-a
+      match:
+        prefix: /
+        hostname: service-a.local
